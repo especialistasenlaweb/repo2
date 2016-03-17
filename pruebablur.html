@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script   src="https://code.jquery.com/jquery-1.12.1.min.js"   integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I="   crossorigin="anonymous"></script>
+  <title>Blur</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <td>mario1</td>
+      <td>mario2</td>
+      <td>mario3</td>
+    </tr>
+    <tr>
+      <td>mario1</td>
+      <td>mario2</td>
+      <td>mario3</td>
+    </tr>
+    <tr class="fila" >
+      <td contenteditable class="col">mario1</td>
+      <td contenteditable class="col">mario2</td>
+      <td contenteditable class="col">mario3</td>
+    </tr>
+  </table>
+  <form class="" action="index.html" method="post">
+    <input type="text" name="name" value="">
+  </form>
+</body>
+<script type="text/javascript">
+  //  $(".col").on("blur",function(){
+  //    alert("hola");
+  //  })
+   $("table .col").on("blur",function(){
+     var fila=$(this).parents("tr").parents("table").html();
+     alert(fila);
+   })
+</script>
+</html>
